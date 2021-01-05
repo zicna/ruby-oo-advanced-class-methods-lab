@@ -55,7 +55,7 @@ class Song
     #binding.pry
     song.artist_name = filename.split(/\s-\s|\./)[0]
     song.name = filename.split(/\s-\s|\./)[1]
-    @@all << song
+    song
 
 
   end
