@@ -56,8 +56,17 @@ class Song
     song.artist_name = filename.split(/\s-\s|\./)[0]
     song.name = filename.split(/\s-\s|\./)[1]
     song
+  end
+#can we do this one using other class method?
+  def self.create_from_filename(filename)
+    song = self.new
+    song.artist_name = filename.split(/\s-\s|\./)[0]
+    song.name = filename.split(/\s-\s|\./)[1]
+    song.save
+  end
 
-
+  def self.destroy_all
+    self.all.clear
   end
 
 end
